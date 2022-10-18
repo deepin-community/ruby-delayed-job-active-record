@@ -1,0 +1,22 @@
+From: Daniel Leidert <dleidert@debian.org>
+Date: Mon, 29 Nov 2021 01:05:43 +0100
+Subject: Fix path to migration template
+
+Forwarded: not-needed
+---
+ spec/helper.rb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/spec/helper.rb b/spec/helper.rb
+index 2211166..c71086a 100644
+--- a/spec/helper.rb
++++ b/spec/helper.rb
+@@ -37,7 +37,7 @@ if db_adapter == "mysql2"
+   types[:primary_key] = types[:primary_key].sub(" DEFAULT NULL", "")
+ end
+ 
+-migration_template = File.open("lib/generators/delayed_job/templates/migration.rb")
++migration_template = File.open(File.join(Gem::Specification.find_by_name('delayed_job_active_record').lib_dirs_glob, "generators/delayed_job/templates/migration.rb"))
+ 
+ # need to eval the template with the migration_version intact
+ migration_context =

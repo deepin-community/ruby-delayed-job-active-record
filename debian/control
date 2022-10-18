@@ -1,0 +1,33 @@
+Source: ruby-delayed-job-active-record
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Balasankar C <balasankarc@autistici.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1),
+               rake,
+               ruby-activerecord (<< 2:6.2),
+               ruby-activerecord (>= 2:3.0),
+               ruby-delayed-job (<< 5),
+               ruby-delayed-job (>= 4.1.9),
+               ruby-rspec,
+               ruby-sqlite3,
+               ruby-simplecov,
+               ruby-coveralls
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-delayed-job-active-record.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-delayed-job-active-record
+Homepage: https://github.com/collectiveidea/delayed_job_active_record
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-delayed-job-active-record
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Description: ActiveRecord backend for DelayedJob
+ This gem provides an ActiveRecord backend for Delayed::Job, which is a
+ Database based asynchronous priority queue system. Delayed Job encapsulates
+ the common pattern of asynchronously executing longer tasks in the background.

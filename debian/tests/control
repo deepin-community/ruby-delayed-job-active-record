@@ -1,0 +1,4 @@
+Test-Command: sed -i 's|lib/generators|/usr/lib/ruby/vendor_ruby/generators|' spec/helper.rb && gem2deb-test-runner --autopkgtest --check-dependencies 2>&1 && sed -i 's|/usr/lib/ruby/vendor_ruby/generators|lib/generators|' spec/helper.rb
+Depends: gem2deb-test-runner,
+         @,
+         @builddeps@

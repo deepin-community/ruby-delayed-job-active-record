@@ -1,0 +1,43 @@
+Description: remove usage/gem dependency on simplecov and simplecov-lcov
+Author: Cédric Boutillier <boutil@debian.org>
+Last-Update: 2021-11-22
+Forwarded: not-needed
+
+--- a/Gemfile
++++ b/Gemfile
+@@ -18,9 +18,6 @@
+   end
+ 
+   gem "rspec", ">= 3"
+-
+-  gem "simplecov", ">= 0.20.0", require: false
+-  gem "simplecov-lcov", ">= 0.8.0", require: false
+ end
+ 
+ group :rubocop do
+--- a/spec/helper.rb
++++ b/spec/helper.rb
+@@ -1,23 +1,5 @@
+ # frozen_string_literal: true
+ 
+-require "simplecov"
+-require "simplecov-lcov"
+-
+-SimpleCov::Formatter::LcovFormatter.config do |c|
+-  c.report_with_single_file = true
+-  c.single_report_path = "coverage/lcov.info"
+-end
+-SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new(
+-  [
+-    SimpleCov::Formatter::HTMLFormatter,
+-    SimpleCov::Formatter::LcovFormatter
+-  ]
+-)
+-
+-SimpleCov.start do
+-  add_filter "/spec/"
+-end
+-
+ require "logger"
+ require "rspec"
+ 
