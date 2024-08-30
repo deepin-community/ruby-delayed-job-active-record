@@ -1,29 +1,26 @@
 Source: ruby-delayed-job-active-record
-Section: ruby
-Priority: optional
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Uploaders: Balasankar C <balasankarc@autistici.org>
+Section: ruby
+Priority: optional
 Build-Depends: debhelper-compat (= 13),
-               gem2deb (>= 1),
+               gem2deb,
                rake,
                ruby-activerecord (<< 2:6.2),
-               ruby-activerecord (>= 2:3.0),
-               ruby-delayed-job (<< 5),
-               ruby-delayed-job (>= 4.1.9),
+               ruby-activerecord,
+               ruby-delayed-job (>= 4.1.11~),
                ruby-rspec,
                ruby-sqlite3,
                ruby-simplecov,
                ruby-coveralls
-Standards-Version: 4.6.0
-Vcs-Git: https://salsa.debian.org/ruby-team/ruby-delayed-job-active-record.git
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-delayed-job-active-record
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-delayed-job-active-record.git
 Homepage: https://github.com/collectiveidea/delayed_job_active_record
-XS-Ruby-Versions: all
 Rules-Requires-Root: no
 
 Package: ruby-delayed-job-active-record
 Architecture: all
-XB-Ruby-Versions: ${ruby:Versions}
 Depends: ${misc:Depends},
          ${ruby:Depends},
          ${shlibs:Depends}
