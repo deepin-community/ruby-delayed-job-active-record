@@ -1,1 +1,8 @@
-.pc/
+*.swp
+.bundle
+.rvmrc
+Gemfile.lock
+bin
+coverage
+pkg/*
+gemfiles/**/*.gemfile.lock

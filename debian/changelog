@@ -1,8 +1,23 @@
-ruby-delayed-job-active-record (4.1.6-3) UNRELEASED; urgency=medium
+ruby-delayed-job-active-record (4.1.8-1) unstable; urgency=medium
 
-  * update
+  * Team upload.
+  * New upstream version
+  * Standards-Version: 4.6.2 (routine-update)
+  * Reorder sequence of d/control fields by cme (routine-update)
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Refresh patches
+  * Remove X?-Ruby-Versions fields from d/control
+  * Update minimum version of ruby-delayed-job to 4.1.11~ (Closes: #1052735)
 
- -- Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>  Tue, 19 Jul 2022 10:20:04 +0800
+ -- Pirate Praveen <praveen@debian.org>  Sat, 10 Feb 2024 01:30:38 +0530
+
+ruby-delayed-job-active-record (4.1.6-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add upstream fix for Ruby 3.1. (Closes: #1019617)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 15 Oct 2022 17:00:10 +0300
 
 ruby-delayed-job-active-record (4.1.6-3) unstable; urgency=medium
 
